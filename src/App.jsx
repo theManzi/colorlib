@@ -1,17 +1,18 @@
+import About from "./components/about";
+import Content from "./components/content";
+import Services from "./components/services";
 
-import Content from './components/content'
-import Header from './navigations/header'
+import Header from "./navigations/header";
 
 function App() {
-
-
   return (
-    <>
+    <div className="items-center justify-center">
       <Header />
       <Content />
-    <h1 className='text-6xl text-red-500 font-bold'>Hello world</h1>
-    </>
-  )
+      <About />
+      <Services/>
+    </div>
+  );
 }
 
-export default App
+export default App;

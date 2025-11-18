@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaRegMap, FaPhone, FaTwitter, FaFacebook, FaGoogle, FaInstagram } from "react-icons/fa";
 
+
+
 const Header = () => {
 
     const icons = [
@@ -33,23 +35,26 @@ const Header = () => {
           ))}
         </div>
       </div>
-      <div className="m-5 ml-20 flex gap-80">
-        <div>
-          <h1 className="text-3xl font-extrabold">
-            UNION<span className="text-blue-500">CORP.</span>
-          </h1>
-          <p className="text-black/40 font-medium">Finance & Consultation</p>
+   
+        <div className="m-5 ml-20 flex gap-80">
+          <div>
+            <h1 className="text-3xl font-extrabold">
+              UNION<span className="text-blue-500">CORP.</span>
+            </h1>
+            <p className="text-black/40 font-medium">Finance & Consultation</p>
+          </div>
+          <div className="flex gap-15 text-lg items-center">
+            <h2>Home</h2>
+            <h2>About</h2>
+            <h2>Services</h2>
+            <h2>work</h2>
+            <h2>Princing</h2>
+            <h2>Blog</h2>
+            <h2>Contact</h2>
+          </div>
         </div>
-        <div className="flex gap-15 text-lg items-center">
-          <h2>Home</h2>
-          <h2>About</h2>
-          <h2>Services</h2>
-          <h2>work</h2>
-          <h2>Princing</h2>
-          <h2>Blog</h2>
-          <h2>Contact</h2>
-        </div>
-      </div>
+       
+     
     </div>
   );
 }
