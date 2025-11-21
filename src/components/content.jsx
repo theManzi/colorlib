@@ -24,7 +24,7 @@ const Content = () => {
       {/* Slide 1 */}
       <SwiperSlide>
         <div
-          className="h-170 w-full bg-cover bg-caver bg-center relative"
+          className="h-170 w-full bg-caver bg-center relative"
           style={{ backgroundImage: "url('/bg_1.jpg')" }}
         >
           <div className="absolute inset-0 bg-[#052f48]/50 flex flex-col justify-center items-center text-white text-center">

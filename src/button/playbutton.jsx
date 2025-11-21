@@ -8,8 +8,9 @@ export default function PlayButton() {
       <motion.div
         className="absolute w-32 h-32 rounded-full bg-blue-500 opacity-30"
         animate={{
-          scale: [0.5, 1.4],
-          opacity: [0.5, 0]
+          scale: [0.5, 1.5],
+          opacity: [0.3, 0.4],
+          
           
         }}
         transition={{
