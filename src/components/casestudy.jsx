@@ -137,7 +137,7 @@ const Casestudy = () => {
                 Business Finance consulting
               </h1>
 
-              <h1 className="text-white text-4xl font-bold mb-90">
+              <h1 className="text-white text-4xl font-bold mb-102">
                 <GrFormSearch className="bg-green-500 text-sm h-14 w-13 rounded-sm" />
               </h1>
             </div>
