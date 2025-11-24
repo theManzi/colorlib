@@ -1,0 +1,31 @@
+import React from 'react'
+import Tittle from './tittle'
+import BlogCard from '../cords/blogcard';
+
+const Blog = () => {
+
+    const images = [
+        { image: '/gallery-1.jpg' },
+        { image: '/gallery-2.jpg' },
+        { image: '/gallery-3.jpg' },
+        { image: '/gallery-4.jpg' },
+       
+    ];
+  return (
+    <div>
+      <div className='text-center mt-100'>
+        <Tittle head1="Our Blog" head2="Recent From Blog" />
+          </div>
+          
+          <div className='flex justify-center flex-wrap mt-20'>
+              {images.map((img, index) => (
+                  <div key={index} className="m-5">
+                      <BlogCard image={img.image} />
+                  </div>
+              ))}
+            </div>
+    </div>
+  );
+}
+
+export default Blog

@@ -176,14 +176,14 @@ const Casestudy = () => {
 
               <div className="text-center text-white">
                 <h1 className="text-5xl font-bold">
-                  {startCount ? <Counter end={(9,200)} /> : "0"}
+                  {startCount ? <Counter end={(9200)} /> : "0"}
                 </h1>
                 <p className="text-xl font-bold mt-2">Satisfied Customers</p>
               </div>
 
               <div className="text-center text-white">
                 <h1 className="text-5xl font-bold">
-                  {startCount ? <Counter end={(5,800)} /> : "0"}
+                  {startCount ? <Counter end={(5800)} /> : "0"}
                 </h1>
                 <p className="text-xl font-bold mt-2">Project Completed</p>
               </div>
