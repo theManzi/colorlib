@@ -52,7 +52,7 @@ const ReadersCord = () => {
       <div className="mt-40 text-center">
         <Tittle head1="Meet Our Brilliant Minds" head2="Our Leadership Team" />
           </div>
-          <div className="mt-20 gap-8 flex flex-wrap justify-center">
+          <div className="mt-20 gap-8 grid grid-cols-4 items-center justify-center">
           {
               cardsData.map((card, index) => (
                   <div key={index} className="inline-block ">

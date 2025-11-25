@@ -5,13 +5,14 @@ import Content from "./components/content";
 import ReadersCord from "./components/readerscord";
 import Services from "./components/services";
 import Testmonial from "./components/testmonial";
+import Footer from "./navigations/footer";
 
 
 import Header from "./navigations/header";
 
 function App() {
   return (
-    <div className="justify-items-center-">
+    <div className=" scroll-smooth">
       <Header />
       <Content />
       <About />
@@ -20,6 +21,7 @@ function App() {
       <ReadersCord />
       <Testmonial />
       <Blog />
+      <Footer />
     </div>
   );
 }

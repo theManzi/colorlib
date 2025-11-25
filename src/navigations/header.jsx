@@ -10,19 +10,29 @@ const Header = () => {
       { icon: <FaFacebook className="mt-4" /> },
       { icon: <FaGoogle className="mt-4" /> },
       { icon: <FaInstagram className="mt-4" /> },
-    ];
+  ];
+  
+  const nav = [
+    "Home",
+    "About",
+    "Services",
+    "work",
+    "Princing",
+    "Blog",
+    "Contact",
+  ]
 
   return (
-    <div className="items-center justify-center">
-      <div className="flex space-x-20 bg-[#052f48] max-w-screen text-white/50">
+    <div className="justify-items-center ">
+      <div className="flex space-x-20 bg-[#052f48] w-screen text-white/50 items-center justify-center ">
         <h2 className="flex items-center">
           <FaPhone className="text-blue-700 rotate-90 ml-20" />
           Call Us:+250 790194517
         </h2>
-        <h2 className="flex ml-10">
+        <h2 className="flex ml-15 items-center">
           <FaRegMap className="text-blue-700 text-xl m-1" /> Location: San
           Francisco, California,
-          <br /> USA
+           USA
         </h2>
         <div className="flex gap-1 ml-95">
           {icons.map((icons, index) => (
@@ -44,13 +54,12 @@ const Header = () => {
             <p className="text-black/40 font-medium">Finance & Consultation</p>
           </div>
           <div className="flex gap-15 text-lg items-center">
-            <h2>Home</h2>
-            <h2>About</h2>
-            <h2>Services</h2>
-            <h2>work</h2>
-            <h2>Princing</h2>
-            <h2>Blog</h2>
-            <h2>Contact</h2>
+           
+            {nav.map((nav, index) => (
+              <div key={index} className="hover:text-blue-500 cursor-pointer">
+                {nav} 
+              </div>
+            ))}
           </div>
         </div>
        

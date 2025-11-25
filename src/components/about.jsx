@@ -8,7 +8,7 @@ import PlayButton from '../button/playbutton';
 
 const About = () => {
   return (
-    <div>
+    <div className='justify-items-center-safe'>
       <div className="mt-40 flex">
         <div className="grid grid-cols-2">
           <div className="group w-85 h-115 bg-white/55 rounded-xl p-15 hover:bg-blue-500 duration-300 ml-20">
@@ -94,8 +94,8 @@ const About = () => {
         className="mt-50 w-full h-screen"
         style={{
           backgroundImage: "url('/bg_4.jpg')",
-          backgroundSize: "caver",
-          backgroundPossition: "center",
+         backgroundSize: 'cover',
+         backgroundPosition: 'center',
         }}
       >
         <div className="m-30 pl-185 pt-35">

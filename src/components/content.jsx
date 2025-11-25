@@ -24,8 +24,8 @@ const Content = () => {
       {/* Slide 1 */}
       <SwiperSlide>
         <div
-          className="h-170 w-full bg-caver bg-center relative"
-          style={{ backgroundImage: "url('/bg_1.jpg')" }}
+          className="h-screen w-full bg-caver bg-center relative"
+          style={{ backgroundImage: "url('/bg_1.jpg')", backgroundSize: 'cover' , backgroundPosition: 'center' }}
         >
           <div className="absolute inset-0 bg-[#052f48]/50 flex flex-col justify-center items-center text-white text-center">
             <h1 className="text-7xl  ">
@@ -48,8 +48,8 @@ const Content = () => {
       {/* Slide 2 */}
       <SwiperSlide>
         <div
-          className="h-170 w-full bg-cover bg-center"
-          style={{ backgroundImage: "url('/bg_2.jpg')" }}
+          className="h-screen w-full bg-cover bg-center"
+          style={{ backgroundImage: "url('/bg_2.jpg')", backgroundSize: 'cover' , backgroundPosition: 'center' }}
         >
           <div className="absolute inset-0 bg-[#052f48]/50 flex flex-col justify-center items-center text-white text-center">
             <h1 className="text-7xl  ">

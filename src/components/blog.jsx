@@ -17,7 +17,7 @@ const Blog = () => {
         <Tittle head1="Our Blog" head2="Recent From Blog" />
           </div>
           
-          <div className='flex justify-center flex-wrap mt-20'>
+          <div className='grid grid-cols-4 justify-center  mt-20'>
               {images.map((img, index) => (
                   <div key={index} className="m-5">
                       <BlogCard image={img.image} />
