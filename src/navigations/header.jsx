@@ -1,5 +1,7 @@
+import { path } from 'framer-motion/client';
 import React from 'react'
 import { FaRegMap, FaPhone, FaTwitter, FaFacebook, FaGoogle, FaInstagram } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,17 +15,17 @@ const Header = () => {
   ];
   
   const nav = [
-    "Home",
-    "About",
-    "Services",
-    "work",
-    "Princing",
-    "Blog",
-    "Contact",
+    { name: "Home", path: "/" },
+    { name: "About", path: "/About" },
+    { name: "Services", path: "/Services" },
+    { name: "Work", path: "/Work" },
+    { name: "Pricing", path: "/Pricing" },
+    { name: "Blog", path: "/Blog" },
+    { name: "Contact", path: "/Contact" },
   ]
 
   return (
-    <div className="justify-items-center ">
+    <div className="justify-items-center w-screen  bg-white justify-center items-center">
       <div className="flex space-x-20 bg-[#052f48] w-screen text-white/50 items-center justify-center ">
         <h2 className="flex items-center">
           <FaPhone className="text-blue-700 rotate-90 ml-20" />
@@ -46,7 +48,7 @@ const Header = () => {
         </div>
       </div>
    
-        <div className="m-5 ml-20 flex gap-80">
+        <div className="p-5 ml-10 flex gap-80">
           <div>
             <h1 className="text-3xl font-extrabold">
               UNION<span className="text-blue-500">CORP.</span>
@@ -56,9 +58,9 @@ const Header = () => {
           <div className="flex gap-15 text-lg items-center">
            
             {nav.map((nav, index) => (
-              <div key={index} className="hover:text-blue-500 cursor-pointer">
-                {nav} 
-              </div>
+              <Link key={index} to={nav.path} className="text-black/60 hover:text-blue-500">
+                {nav.name}
+              </Link>
             ))}
           </div>
         </div>

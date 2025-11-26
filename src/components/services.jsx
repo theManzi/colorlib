@@ -49,11 +49,12 @@ const Services = () => {
     },
   ];
   return (
-    <div className="justify-center items-center">
+    <div className="justify-center items-center bg-[#f4f6ff]">
       <div className="p-30 pl-50 text-center">
         <Tittle
           head1="Services"
-          head2="Our Exclusive Services We Offer For You"
+          head2="Our Exclusive Services "
+          head3="We Offer For You"
         />
       </div>
 
@@ -64,7 +65,6 @@ const Services = () => {
               <GrMoney className=" text-blue-500 pt-2" size={100} />
               <div className="absolute -bottom-8 text-white text-4xl">
                 <IoTriangleSharp size={70} className="rotate-180" />
- 
               </div>
             </div>
             <h1 className="text-3xl  font-semibold pt-10 text-black">

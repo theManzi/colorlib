@@ -5,6 +5,7 @@ import Button from '../button/button';
 import Button2 from '../button/button2';
 import { IoIosPlay } from 'react-icons/io';
 import PlayButton from '../button/playbutton';
+import Video from './video';
 
 const About = () => {
   return (
@@ -90,34 +91,8 @@ const About = () => {
           <Button2 name="LEAN MARE" />
         </div>
       </div>
-      <div
-        className="mt-50 w-full h-screen"
-        style={{
-          backgroundImage: "url('/bg_4.jpg')",
-         backgroundSize: 'cover',
-         backgroundPosition: 'center',
-        }}
-      >
-        <div className="m-30 pl-185 pt-35">
-          <Tittle
-            head1="About Union Corporation"
-            head2="Quality Makes the Belief for Customers"
-            p1="Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
-          />
-          <a
-            href="https://youtu.be/EudmyLfxRQQ?list=RDEudmyLfxRQQ&t=11"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="flex cursor-pointer">
-              <PlayButton />
-              <h1 className="text-2xl text-blue-500 font-bold mt-12 ml-10">
-                Watch Video
-              </h1>
-            </button>
-          </a>
-        </div>
-      </div>
+
+    <Video />
     </div>
   );
 }

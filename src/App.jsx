@@ -1,27 +1,37 @@
-import About from "./components/about";
-import Blog from "./components/blog";
-import Casestudy from "./components/casestudy";
-import Content from "./components/content";
-import ReadersCord from "./components/readerscord";
-import Services from "./components/services";
-import Testmonial from "./components/testmonial";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Footer from "./navigations/footer";
 
 
+import Home from "./home";
+import About from "./About";
+import Blog from "./Blog";
+import Work from "./Work";
+import Pricing from "./Pricing";
+import Contact from "./Contact";
 import Header from "./navigations/header";
+import ServicesPage from "./ServicesPage";
 
 function App() {
   return (
-    <div className=" scroll-smooth">
-      <Header />
-      <Content />
-      <About />
-      <Services />
-      <Casestudy />
-      <ReadersCord />
-      <Testmonial />
-      <Blog />
-      <Footer />
+    <div className=" scroll-smooth ">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
+          
+         
+        
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+      
     </div>
   );
 }

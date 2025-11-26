@@ -34,7 +34,7 @@ const Footer = () => {
     ];
           
   return (
-    <div className="mt-50">
+    <div className="w-screen">
       <div
         className="relative bg-caver bg-center"
         style={{

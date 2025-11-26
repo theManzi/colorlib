@@ -5,7 +5,7 @@ const TestCard = ({image}) => {
   return (
     <div className="justify-items-center">
       <div
-        className="relative bg-white h-95 w-120 rounded-lg card-active
+        className="relative bg-white h-95 w-110 rounded-lg card-active
       [.swiper-slide-active_&]:bg-blue-500"
       >
         <div className="absolute -top-7 left-10">
@@ -17,13 +17,13 @@ const TestCard = ({image}) => {
         </div>
         <p className="text-2xl text-black/50 m-10 pt-8 [.swiper-slide-active_&]:text-white/80">
           Far far away, behind the word
-          <br /> mountains, far from the countries
-          <br />
+          mountains, far from the countries
+          
           Vokalia and Consonantia, there live
-          <br /> the blind texts.
+          the blind texts.
         </p>
-        <div className="flex gap-10 pt-5 justify-center">
-          <img src={image} alt="person" className="w-30 h-30 rounded-full " />
+        <div className="flex gap-5 pt-5 justify-center">
+          <img src={image} alt="person" className="w-28 h-28 rounded-full " />
           <h1 className="text-3xl text-blue-500 font-semibold pt-5 [.swiper-slide-active_&]:text-white">
             Roger Scott <br />
             <span className="text-xl text-black/70 font-semibold [.swiper-slide-active_&]:text-white/90">

@@ -12,7 +12,7 @@ const Blog = () => {
        
     ];
   return (
-    <div>
+    <div className='mb-50'>
       <div className='text-center mt-100'>
         <Tittle head1="Our Blog" head2="Recent From Blog" />
           </div>
