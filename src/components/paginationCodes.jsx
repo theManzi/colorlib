@@ -1,84 +1,39 @@
 import React from 'react'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const PaginationCodes= () => {
   return (
     <div>
       {/* pagination */}
-      <div class="flex items-center gap-2 bg-white justify-center">
-        <div className="m-30 flex">
-          <button type="button" aria-label="Previous" class="mr-4">
-            <svg
-              width="9"
-              height="16"
-              viewBox="0 0 12 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M11 1L2 9.24242L11 17"
-                stroke="#111820"
-                stroke-opacity="0.7"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
+      <div class="flex items-center gap-1 bg-white justify-center">
+        <div className="m-30 flex gap-1">
+          <button className="border-black/10 border rounded-lg hover:bg-blue-500 transition duration-300 ">
+            <IoIosArrowBack className="w-12" />
           </button>
 
-          <div class="flex gap-2 text-gray-500 text-sm md:text-base">
-            <button
-              type="button"
-              class="flex items-center justify-center active:scale-95 w-9 md:w-12 h-9 md:h-12 aspect-square bg-white border border-gray-200 rounded-md hover:bg-gray-100/70 transition-all"
-            >
+          <div class="flex gap-1 text-black text-2xl md:text-base">
+            <button className="border-black/10 border rounded-lg bg-blue-500 transition duration-300 w-12 h-12">
               1
             </button>
-            <button
-              type="button"
-              class="flex items-center justify-center active:scale-95 w-9 md:w-12 h-9 md:h-12 aspect-square bg-indigo-500 text-white rounded-md transition-all"
-            >
+            <button className="border-black/10 border rounded-lg hover:bg-blue-500 transition duration-300 w-12 h-12 ">
               2
             </button>
-            <button
-              type="button"
-              class="flex items-center justify-center active:scale-95 w-9 md:w-12 h-9 md:h-12 aspect-square bg-white border border-gray-200 rounded-md hover:bg-gray-100/70 transition-all"
-            >
+            <button className="border-black/10 border rounded-lg hover:bg-blue-500 transition duration-300 w-12 h-12 ">
               3
             </button>
-            <button
-              type="button"
-              class="flex items-center justify-center active:scale-95 w-9 md:w-12 h-9 md:h-12 aspect-square bg-white border border-gray-200 rounded-md hover:bg-gray-100/70 transition-all"
-            >
+            <button className="border-black/10 border rounded-lg hover:bg-blue-500 transition duration-300 w-12 h-12 ">
               4
             </button>
-            <button
-              type="button"
-              class="flex items-center justify-center active:scale-95 w-9 md:w-12 h-9 md:h-12 aspect-square bg-white border border-gray-200 rounded-md hover:bg-gray-100/70 transition-all"
-            >
+            <button className="border-black/10 border rounded-lg hover:bg-blue-500 transition duration-300 w-12 h-12 ">
               5
             </button>
-            <button
-              type="button"
-              class="flex items-center justify-center active:scale-95 w-9 md:w-12 h-9 md:h-12 aspect-square bg-white border border-gray-200 rounded-md hover:bg-gray-100/70 transition-all"
-            >
+            <button className="border-black/10 border rounded-lg hover:bg-blue-500 transition duration-300 w-12 h-12 ">
               6
             </button>
           </div>
 
-          <button type="button" aria-label="Next" class="ml-4">
-            <svg
-              width="9"
-              height="16"
-              viewBox="0 0 12 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 1L10 9.24242L1 17"
-                stroke="#111820"
-                stroke-opacity="0.7"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
+          <button className="mr-4 border-black/10 border rounded-lg hover:bg-blue-500 transition duration-300 ">
+            <IoIosArrowForward className=" w-12" />
           </button>
         </div>
       </div>

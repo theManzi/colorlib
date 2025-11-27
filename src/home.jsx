@@ -1,6 +1,6 @@
 import React from 'react'
 import About from "./components/about";
-import Blog from "./components/blog";
+import Blog from "./components/blog-1";
 import Casestudy from "./components/casestudy";
 import Content from "./components/content";
 import ReadersCord from "./components/readerscord";
