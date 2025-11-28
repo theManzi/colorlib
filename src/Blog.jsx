@@ -8,18 +8,23 @@ import { IoIosArrowRoundForward, IoMdPerson } from 'react-icons/io';
 import { SlCalender } from 'react-icons/sl';
 import { FaComment } from 'react-icons/fa';
 import RecentCard from './cords/recentCard';
+import { Link, Outlet } from "react-router-dom";
+
+
+
+
 
 
 
 const BlogPage = () => {
 
    const images = [
-     { image: "/gallery-1.jpg" },
-     { image: "/gallery-2.jpg" },
-     { image: "/gallery-3.jpg" },
-     { image: "/gallery-4.jpg" },
-     { image: "/gallery-1.jpg" },
-     { image: "/gallery-2.jpg" },
+     { image: "/image_1.jpg" },
+     { image: "/image_2.jpg" },
+     { image: "/image_3.jpg" },
+     { image: "/image_4.jpg" },
+     { image: "/image_5.jpg" },
+     { image: "/image_6.jpg" },
    ];
   
   const services = [
@@ -36,20 +41,37 @@ const BlogPage = () => {
   
 
   const recentImage = [
-    { imag: "/gallery-1.jpg" },
-    { imag: "/gallery-2.jpg" },
-    { imag: "/gallery-3.jpg" },
+    { imag: "/image_1.jpg" },
+    { imag: "/image_2.jpg" },
+    { imag: "/image_3.jpg" },
+  ];
+
+   
+  const tag = [
+    { tagCloud: "FINANCE" },
+    { tagCloud: "FUND" },
+    { tagCloud: "CONSALT" },
+    { tagCloud: "BUSINESS" },
+    { tagCloud: "FUNDING" },
+    { tagCloud: "MONEY" },
+    { tagCloud: "INVEST" },
+    { tagCloud: "PLAN" },
+    { tagCloud: "TAX" },
   ];
   return (
     <div>
       <BackGround to="/" name="HOME" page="BLOG" pageName="Blog" />
+   
+     
 
       <div className="bg-[#f9faff]">
         <div className="flex">
           <div className="justify-center mt-30 pt-20">
             {images.map((img, index) => (
               <div key={index} className="pt-10 pl-20">
-                <Blogcardflex image={img.image} />
+                <Link to="/single">
+                  <Blogcardflex image={img.image} />
+                </Link>
               </div>
             ))}
           </div>
@@ -83,62 +105,29 @@ const BlogPage = () => {
               <h1 className="text-black text-3xl font-semibold mb-10">
                 Tag Cloud
               </h1>
-              <div className='gap-20 space-y-5'>
-              <a
-                href=""
-                className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-              >
-                FINANCE
-              </a>
-              <a
-                href=""
-                className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-                >FUND
-              </a>
-                <a
-                  href=""
-                  className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-                >
-                  CONSULT
-                </a>
-                <a
-                  href=""
-                  className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-                >
-                 BUSINESS
-                </a><br/>
-                <a
-                  href=""
-                  className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20 mt-3"
-                >
-                  FUNDING
-                </a>
-                <a
-                  href=""
-                  className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-                >
-                 MONEY
-                </a>
-                <a
-                  href=""
-                  className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-                >
-                  INVEST
-                </a>
-                <a
-                  href=""
-                  className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-                >
-                 PLAN
-                </a><br/>
-                <a
-                  href=""
-                  className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-                >
-                 TAX
-                </a>
+              <div className="grid grid-cols-4 gap-5">
+                {tag.map((data, index) => (
+                  <div key={index}>
+                    <a
+                      href=""
+                      className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
+                    >
+                      {data.tagCloud}
+                    </a>
+                  </div>
+                ))}
               </div>
-              
+            </div>
+            <div className="mt-10">
+              <h1 className="text-black text-3xl font-semibold mb-10">
+                Paragraph
+              </h1>
+              <p className="text-xl text-black/50 mr-25 ">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Ducimus itaque, autem necessitatibus voluptate quod mollitia
+                delectus aut, sunt placeat nam vero culpa sapiente consectetur
+                similique, inventore eos fugit cupiditate numquam!
+              </p>
             </div>
           </div>
         </div>

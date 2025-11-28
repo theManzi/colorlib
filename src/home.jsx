@@ -7,6 +7,7 @@ import ReadersCord from "./components/readerscord";
 import Services from "./components/services";
 import Testmonial from "./components/testmonial";
 
+
 const Home = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Home = () => {
       <ReadersCord />
       <Testmonial />
       <Blog />
+      
     </div>
   );
 }
