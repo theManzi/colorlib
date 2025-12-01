@@ -18,7 +18,7 @@ import BlogPage from "./Blog";
 
 function App() {
   return (
-    <div className=" scroll-smooth ">
+    <div className="  ">
       <BrowserRouter>
         <Header />
         <Routes>
