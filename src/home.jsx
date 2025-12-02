@@ -6,19 +6,33 @@ import Content from "./components/content";
 import ReadersCord from "./components/readerscord";
 import Services from "./components/services";
 import Testmonial from "./components/testmonial";
+import ScrollFade from './components/scrollFade';
 
 
 const Home = () => {
   return (
     <div>
-      <Content />
-      <About />
-      <Services />
-      <Casestudy />
-      <ReadersCord />
-      <Testmonial />
-      <Blog />
-      
+      <ScrollFade>
+        <Content />
+      </ScrollFade>
+      <ScrollFade>
+        <About />
+      </ScrollFade>
+      <ScrollFade>
+        <Services />
+      </ScrollFade>
+      <ScrollFade>
+        <Casestudy />
+      </ScrollFade>
+      <ScrollFade>
+        <ReadersCord />
+      </ScrollFade>
+      <ScrollFade>
+        <Testmonial />
+      </ScrollFade>
+      <ScrollFade>
+        <Blog />
+      </ScrollFade>
     </div>
   );
 }

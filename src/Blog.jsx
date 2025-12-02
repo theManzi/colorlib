@@ -9,6 +9,7 @@ import { SlCalender } from 'react-icons/sl';
 import { FaComment } from 'react-icons/fa';
 import RecentCard from './cords/recentCard';
 import { Link, Outlet } from "react-router-dom";
+import ScrollFade from './components/scrollFade';
 
 
 
@@ -61,38 +62,44 @@ const BlogPage = () => {
   return (
     <div>
       <BackGround to="/" name="HOME" page="BLOG" pageName="Blog" />
-   
-     
 
       <div className="bg-[#f9faff]">
         <div className="flex">
-          <div className="justify-center mt-30 pt-20">
-            {images.map((img, index) => (
-              <div key={index} className="pt-10 pl-20">
-                <Link to="/single">
-                  <Blogcardflex image={img.image} />
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className="mt-60 ml-15">
-            <Search />
-            <div className="space-y-8 mt-10">
-              <h1 className="text-black text-3xl font-semibold">
-                Our Services
-              </h1>
-              {services.map((dat, index) => (
-                <div key={index}>
-                  <p className="flex text-2xl text-black/60">
-                    <IoIosArrowRoundForward className="text-2xl pt-2 text-blue-500" />
-                    {dat.data}
-                  </p>
+         
+            <div className="justify-center mt-30 pt-20">
+              {images.map((img, index) => (
+                <div key={index} className="pt-10 pl-20">
+                  <Link to="/single">
+                    <Blogcardflex image={img.image} />
+                  </Link>
                 </div>
               ))}
             </div>
+        
+          <div className="mt-60 ml-15">
+            <Search />
+            <div className="space-y-8 mt-10">
+              <ScrollFade>
+                {" "}
+                <h1 className="text-black text-3xl font-semibold">
+                  Our Services
+                </h1>
+                </ScrollFade>
+                {services.map((dat, index) => (
+                  <div key={index}>
+                    <p className="flex text-2xl text-black/60">
+                      <IoIosArrowRoundForward className="text-2xl pt-2 text-blue-500" />
+                      {dat.data}
+                    </p>
+                  </div>
+                ))}
+            </div>
             <div className="mt-10">
-              <h1 className="text-black text-3xl font-semibold">Recent Blog</h1>
-
+              <ScrollFade>
+                <h1 className="text-black text-3xl font-semibold">
+                  Recent Blog
+                </h1>
+              </ScrollFade>
               <div>
                 {recentImage.map((recent, index) => (
                   <div key={index}>
@@ -102,9 +109,11 @@ const BlogPage = () => {
               </div>
             </div>
             <div className="mt-10 ">
-              <h1 className="text-black text-3xl font-semibold mb-10">
-                Tag Cloud
-              </h1>
+              <ScrollFade>
+                <h1 className="text-black text-3xl font-semibold mb-10">
+                  Tag Cloud
+                </h1>
+              </ScrollFade>
               <div className="grid grid-cols-4 gap-5">
                 {tag.map((data, index) => (
                   <div key={index}>
@@ -119,15 +128,17 @@ const BlogPage = () => {
               </div>
             </div>
             <div className="mt-10">
-              <h1 className="text-black text-3xl font-semibold mb-10">
-                Paragraph
-              </h1>
-              <p className="text-xl text-black/50 mr-25 ">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ducimus itaque, autem necessitatibus voluptate quod mollitia
-                delectus aut, sunt placeat nam vero culpa sapiente consectetur
-                similique, inventore eos fugit cupiditate numquam!
-              </p>
+              <ScrollFade>
+                <h1 className="text-black text-3xl font-semibold mb-10">
+                  Paragraph
+                </h1>
+                <p className="text-xl text-black/50 mr-25 ">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus itaque, autem necessitatibus voluptate quod mollitia
+                  delectus aut, sunt placeat nam vero culpa sapiente consectetur
+                  similique, inventore eos fugit cupiditate numquam!
+                </p>
+              </ScrollFade>
             </div>
           </div>
         </div>

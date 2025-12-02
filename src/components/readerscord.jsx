@@ -1,6 +1,7 @@
 import React from 'react'
 import Tittle from './tittle'
 import Cards from '../cords/cards';
+import { motion } from 'framer-motion';
 
 const ReadersCord = () => {
 
@@ -51,16 +52,25 @@ const ReadersCord = () => {
     <div>
       <div className="mt-40 text-center">
         <Tittle head1="Meet Our Brilliant Minds" head2="Our Leadership Team" />
-          </div>
-          <div className="mt-20 gap-8 grid grid-cols-4 items-center justify-center">
-          {
-              cardsData.map((card, index) => (
-                  <div key={index} className="inline-block ">
-                      <Cards image={card.image} name={card.name} title={card.title} />
-                  </div>
-                ))
-              }
-              </div>
+      </div>
+      <motion.div
+        initial={{ rotateY: 90 }}
+        whileInView={{ rotateY: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: true }}
+        style={{
+          transformStyle: "preserve-3d",
+          perspective: 800,
+        }}
+      >
+        <div className="mt-20 gap-8 ml-5 grid grid-cols-4 items-center justify-center">
+          {cardsData.map((card, index) => (
+            <div key={index} className="inline-block ">
+              <Cards image={card.image} name={card.name} title={card.title} />
+            </div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 }

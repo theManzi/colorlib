@@ -1,49 +1,47 @@
-import React from 'react'
-import BackGround from './background'
-import { Outlet } from 'react-router-dom';
-import { IoIosArrowForward, IoIosArrowRoundForward } from 'react-icons/io';
-import RecentCard from '../cords/recentCard';
-import Search from './search';
-import Tittle from './tittle';
-
-
+import React from "react";
+import BackGround from "./background";
+import { Outlet } from "react-router-dom";
+import { IoIosArrowForward, IoIosArrowRoundForward } from "react-icons/io";
+import RecentCard from "../cords/recentCard";
+import Search from "./search";
+import Tittle from "./tittle";
+import ScrollFade from "./scrollFade";
 
 const BlogSingle = () => {
-
-   const services = [
-     { data: "Financial Planning" },
-     { data: "Investments Management" },
-     { data: "Business Loan" },
-     { data: "Taxes Consulting" },
-     { data: "Insurance Consulting" },
-     { data: "Retirement Planning" },
-     { data: "Risk Management" },
-     { data: "Technology Consulting" },
-   ];
-
-   const recentImage = [
-     { imag: "/image_1.jpg" },
-     { imag: "/image_2.jpg" },
-     { imag: "/image_3.jpg" },
-   ];
-
-   const tag = [
-     { tagCloud: "FINANCE" },
-     { tagCloud: "FUND" },
-     { tagCloud: "CONSALT" },
-     { tagCloud: "BUSINESS" },
-     { tagCloud: "FUNDING" },
-     { tagCloud: "MONEY" },
-     { tagCloud: "INVEST" },
-     { tagCloud: "PLAN" },
-     { tagCloud: "TAX" },
+  const services = [
+    { data: "Financial Planning" },
+    { data: "Investments Management" },
+    { data: "Business Loan" },
+    { data: "Taxes Consulting" },
+    { data: "Insurance Consulting" },
+    { data: "Retirement Planning" },
+    { data: "Risk Management" },
+    { data: "Technology Consulting" },
   ];
-  
+
+  const recentImage = [
+    { imag: "/image_1.jpg" },
+    { imag: "/image_2.jpg" },
+    { imag: "/image_3.jpg" },
+  ];
+
+  const tag = [
+    { tagCloud: "FINANCE" },
+    { tagCloud: "FUND" },
+    { tagCloud: "CONSALT" },
+    { tagCloud: "BUSINESS" },
+    { tagCloud: "FUNDING" },
+    { tagCloud: "MONEY" },
+    { tagCloud: "INVEST" },
+    { tagCloud: "PLAN" },
+    { tagCloud: "TAX" },
+  ];
+
   const finance = [
     { tagCloud: "FINANCE" },
     { tagCloud: "FUNDS" },
     { tagCloud: "INVEST" },
-    { tagCloud: "BUSINESS" }
+    { tagCloud: "BUSINESS" },
   ];
   return (
     <div>
@@ -58,8 +56,7 @@ const BlogSingle = () => {
       />
       <main>
         <Outlet />
-      </main>
-
+      </main>{" "}
       <div className="bg-[#f9faff]">
         <div className="flex">
           <div className="justify-center mt-30 pt-20 pl-25 pb-20">
@@ -94,13 +91,16 @@ const BlogSingle = () => {
                 />
               </div>
               <div>
-                <h1 className="text-4xl text-black mb-5">John Henderson</h1>
-                <p className="text-2xl text-black/50">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ducimus itaque, autem necessitatibus voluptate quod mollitia
-                  delectus aut, sunt placeat nam vero culpa sapiente consectetur
-                  similique, inventore eos fugit cupiditate numquam!
-                </p>
+                <ScrollFade>
+                  <h1 className="text-4xl text-black mb-5">John Henderson</h1>
+                  <p className="text-2xl text-black/50">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ducimus itaque, autem necessitatibus voluptate quod mollitia
+                    delectus aut, sunt placeat nam vero culpa sapiente
+                    consectetur similique, inventore eos fugit cupiditate
+                    numquam!
+                  </p>
+                </ScrollFade>
               </div>
             </div>
             <div className="mt-30">
@@ -114,19 +114,21 @@ const BlogSingle = () => {
                   />
                 </div>
                 <div className="pl-10">
-                  <h1 className="text-3xl text-black">John Doe</h1>
-                  <p className="text-base mb-5 text-black/50 font-semibold">
-                    January 27, 2021 at 7:20am
-                  </p>
-                  <p className="text-2xl text-black/50 mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Pariatur quidem laborum necessitatibus, ipsam impedit vitae
-                    autem, eum officia, fugiat saepe enim sapiente iste iure!
-                    Quam voluptas earum impedit necessitatibus, nihil?
-                  </p>
-                  <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
-                    REPLY
-                  </button>
+                  <ScrollFade>
+                    <h1 className="text-3xl text-black">John Doe</h1>
+                    <p className="text-base mb-5 text-black/50 font-semibold">
+                      January 27, 2021 at 7:20am
+                    </p>
+                    <p className="text-2xl text-black/50 mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Pariatur quidem laborum necessitatibus, ipsam impedit
+                      vitae autem, eum officia, fugiat saepe enim sapiente iste
+                      iure! Quam voluptas earum impedit necessitatibus, nihil?
+                    </p>
+                    <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
+                      REPLY
+                    </button>
+                  </ScrollFade>
                 </div>
               </div>
 
@@ -140,19 +142,21 @@ const BlogSingle = () => {
                   />
                 </div>
                 <div className="pl-10">
-                  <h1 className="text-3xl text-black">John Doe</h1>
-                  <p className="text-base mb-5 text-black/50 font-semibold">
-                    January 27, 2021 at 7:20am
-                  </p>
-                  <p className="text-2xl text-black/50 mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Pariatur quidem laborum necessitatibus, ipsam impedit vitae
-                    autem, eum officia, fugiat saepe enim sapiente iste iure!
-                    Quam voluptas earum impedit necessitatibus, nihil?
-                  </p>
-                  <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
-                    REPLY
-                  </button>
+                  <ScrollFade>
+                    <h1 className="text-3xl text-black">John Doe</h1>
+                    <p className="text-base mb-5 text-black/50 font-semibold">
+                      January 27, 2021 at 7:20am
+                    </p>
+                    <p className="text-2xl text-black/50 mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Pariatur quidem laborum necessitatibus, ipsam impedit
+                      vitae autem, eum officia, fugiat saepe enim sapiente iste
+                      iure! Quam voluptas earum impedit necessitatibus, nihil?
+                    </p>
+                    <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
+                      REPLY
+                    </button>
+                  </ScrollFade>
                 </div>
               </div>
 
@@ -166,19 +170,21 @@ const BlogSingle = () => {
                   />
                 </div>
                 <div className="pl-10">
-                  <h1 className="text-3xl text-black">John Doe</h1>
-                  <p className="text-base mb-5 text-black/50 font-semibold">
-                    January 27, 2021 at 7:20am
-                  </p>
-                  <p className="text-2xl text-black/50 mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Pariatur quidem laborum necessitatibus, ipsam impedit vitae
-                    autem, eum officia, fugiat saepe enim sapiente iste iure!
-                    Quam voluptas earum impedit necessitatibus, nihil?
-                  </p>
-                  <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
-                    REPLY
-                  </button>
+                  <ScrollFade>
+                    <h1 className="text-3xl text-black">John Doe</h1>
+                    <p className="text-base mb-5 text-black/50 font-semibold">
+                      January 27, 2021 at 7:20am
+                    </p>
+                    <p className="text-2xl text-black/50 mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Pariatur quidem laborum necessitatibus, ipsam impedit
+                      vitae autem, eum officia, fugiat saepe enim sapiente iste
+                      iure! Quam voluptas earum impedit necessitatibus, nihil?
+                    </p>
+                    <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
+                      REPLY
+                    </button>
+                  </ScrollFade>
                 </div>
               </div>
 
@@ -192,19 +198,21 @@ const BlogSingle = () => {
                   />
                 </div>
                 <div className="pl-10">
-                  <h1 className="text-3xl text-black">John Doe</h1>
-                  <p className="text-base mb-5 text-black/50 font-semibold">
-                    January 27, 2021 at 7:20am
-                  </p>
-                  <p className="text-2xl text-black/50 mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Pariatur quidem laborum necessitatibus, ipsam impedit vitae
-                    autem, eum officia, fugiat saepe enim sapiente iste iure!
-                    Quam voluptas earum impedit necessitatibus, nihil?
-                  </p>
-                  <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
-                    REPLY
-                  </button>
+                  <ScrollFade>
+                    <h1 className="text-3xl text-black">John Doe</h1>
+                    <p className="text-base mb-5 text-black/50 font-semibold">
+                      January 27, 2021 at 7:20am
+                    </p>
+                    <p className="text-2xl text-black/50 mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Pariatur quidem laborum necessitatibus, ipsam impedit
+                      vitae autem, eum officia, fugiat saepe enim sapiente iste
+                      iure! Quam voluptas earum impedit necessitatibus, nihil?
+                    </p>
+                    <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
+                      REPLY
+                    </button>
+                  </ScrollFade>
                 </div>
               </div>
 
@@ -218,132 +226,152 @@ const BlogSingle = () => {
                   />
                 </div>
                 <div className="pl-10">
-                  <h1 className="text-3xl text-black">John Doe</h1>
-                  <p className="text-base mb-5 text-black/50 font-semibold">
-                    January 27, 2021 at 7:20am
-                  </p>
-                  <p className="text-2xl text-black/50 mb-5">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Pariatur quidem laborum necessitatibus, ipsam impedit vitae
-                    autem, eum officia, fugiat saepe enim sapiente iste iure!
-                    Quam voluptas earum impedit necessitatibus, nihil?
-                  </p>
-                  <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
-                    REPLY
-                  </button>
+                  <ScrollFade>
+                    <h1 className="text-3xl text-black">John Doe</h1>
+                    <p className="text-base mb-5 text-black/50 font-semibold">
+                      January 27, 2021 at 7:20am
+                    </p>
+                    <p className="text-2xl text-black/50 mb-5">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Pariatur quidem laborum necessitatibus, ipsam impedit
+                      vitae autem, eum officia, fugiat saepe enim sapiente iste
+                      iure! Quam voluptas earum impedit necessitatibus, nihil?
+                    </p>
+                    <button className="font-semibold px-4 py-1 rounded-sm text-white bg-green-500 hover:bg-black duration-300 cursor-pointer">
+                      REPLY
+                    </button>
+                  </ScrollFade>
                 </div>
               </div>
 
               <div className="mt-30">
-                <h1 className="text-5xl">Leave a comment</h1>
+                <ScrollFade>
+                  <h1 className="text-5xl">Leave a comment</h1>
+                </ScrollFade>
                 <div className="h-190 w-230 bg-[#ffffff] mt-15">
-                  <table>
-                    <div className="p-20 space-y-10">
-                      <div className="flex gap-7">
-                        <span>
-                          <span className="text-blue-500 text-base font-bold">
-                            NAME*
+                  <ScrollFade>
+                    <table>
+                      <div className="p-20 space-y-10">
+                        <div className="flex gap-7">
+                          <span>
+                            <span className="text-blue-500 text-base font-bold">
+                              NAME*
+                            </span>
+                            <br />
+                            <input
+                              type="text"
+                              className="border border-black/20 focus:border-blue-500 outline-none p-3 w-90 in-focus-within:to-blue-500"
+                            />
                           </span>
-                          <br />
-                          <input
-                            type="text"
-                            className="border border-black/20 focus:border-blue-500 outline-none p-3 w-90 in-focus-within:to-blue-500"
-                          />
-                        </span>
-                        <span>
-                          <span className="text-blue-500 text-base font-bold">
-                            EMAIL*
+                          <span>
+                            <span className="text-blue-500 text-base font-bold">
+                              EMAIL*
+                            </span>
+                            <br />
+                            <input
+                              type="text"
+                              className="border border-black/20 focus:border-blue-500 outline-none p-3 w-90 in-focus-within:to-blue-500"
+                            />
                           </span>
-                          <br />
-                          <input
-                            type="text"
-                            className="border border-black/20 focus:border-blue-500 outline-none p-3 w-90 in-focus-within:to-blue-500"
-                          />
+                        </div>
+                        <span className="text-blue-500 text-base font-bold">
+                          WEBSITE
                         </span>
+                        <br />
+                        <input
+                          type="text"
+                          className="border border-black/20 focus:border-blue-500 outline-none p-3 w-187 in-focus-within:to-blue-500"
+                        />
+                        <span className="text-blue-500 text-base font-bold">
+                          MESSAGE
+                        </span>
+                        <textarea
+                          name="Message"
+                          id="5"
+                          rows={11}
+                          className="border border-black/20 focus:border-blue-500 outline-none p-3 w-187 in-focus-within:to-blue-500"
+                        />
+                        <button className="px-8 py-5 font-bold bg-blue-500 text-white rounded-sm cursor-pointer">
+                          POST COMMENT
+                        </button>
                       </div>
-                      <span className="text-blue-500 text-base font-bold">
-                        WEBSITE
-                      </span>
-                      <br />
-                      <input
-                        type="text"
-                        className="border border-black/20 focus:border-blue-500 outline-none p-3 w-187 in-focus-within:to-blue-500"
-                      />
-                      <span className="text-blue-500 text-base font-bold">
-                       MESSAGE
-                      </span>
-                      <textarea
-                        name="Message"
-                        id="5"
-                        rows={11}
-                        className="border border-black/20 focus:border-blue-500 outline-none p-3 w-187 in-focus-within:to-blue-500"
-                      />
-                      <button className='px-8 py-5 font-bold bg-blue-500 text-white rounded-sm cursor-pointer'>POST COMMENT</button>
-                    </div>
-                  </table>
+                    </table>
+                  </ScrollFade>
                 </div>
               </div>
             </div>
           </div>
           <div className="mt-60 ml-15">
             <Search />
-            <div className="space-y-8 mt-10">
-              <h1 className="text-black text-3xl font-semibold">
-                Our Services
-              </h1>
-              {services.map((dat, index) => (
-                <div key={index}>
-                  <p className="flex text-2xl text-black/60">
-                    <IoIosArrowRoundForward className="text-2xl pt-2 text-blue-500" />
-                    {dat.data}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <ScrollFade>
+              <div className="space-y-8 mt-10">
+                <h1 className="text-black text-3xl font-semibold">
+                  Our Services
+                </h1>
+                {services.map((dat, index) => (
+                  <div key={index}>
+                    <p className="flex text-2xl text-black/60">
+                      <IoIosArrowRoundForward className="text-2xl pt-2 text-blue-500" />
+                      {dat.data}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </ScrollFade>
             <div className="mt-10">
-              <h1 className="text-black text-3xl font-semibold">Recent Blog</h1>
+              <ScrollFade>
+                <h1 className="text-black text-3xl font-semibold">
+                  Recent Blog
+                </h1>
 
-              <div>
-                {recentImage.map((recent, index) => (
-                  <div key={index}>
-                    <RecentCard recentimg={recent.imag} />
-                  </div>
-                ))}
-              </div>
+                <div>
+                  {recentImage.map((recent, index) => (
+                    <div key={index}>
+                      <RecentCard recentimg={recent.imag} />
+                    </div>
+                  ))}
+                </div>
+              </ScrollFade>
             </div>
+
             <div className="mt-10 ">
-              <h1 className="text-black text-3xl font-semibold mb-10">
-                Tag Cloud
-              </h1>
-              <div className="grid grid-cols-4 gap-5">
-                {tag.map((data, index) => (
-                  <div key={index}>
-                    <a
-                      href=""
-                      className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
-                    >
-                      {data.tagCloud}
-                    </a>
-                  </div>
-                ))}
-              </div>
+              <ScrollFade>
+                <h1 className="text-black text-3xl font-semibold mb-10">
+                  Tag Cloud
+                </h1>
+                <div className="grid grid-cols-4 gap-5">
+                  {tag.map((data, index) => (
+                    <div key={index}>
+                      <a
+                        href=""
+                        className="text-blue-500 text-base font-semibold rounded-sm p-2 bg-blue-500/20"
+                      >
+                        {data.tagCloud}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </ScrollFade>
             </div>
+
             <div className="mt-10">
-              <h1 className="text-black text-3xl font-semibold mb-10">
-                Paragraph
-              </h1>
-              <p className="text-xl text-black/50 mr-25 ">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Ducimus itaque, autem necessitatibus voluptate quod mollitia
-                delectus aut, sunt placeat nam vero culpa sapiente consectetur
-                similique, inventore eos fugit cupiditate numquam!
-              </p>
+              <ScrollFade>
+                <h1 className="text-black text-3xl font-semibold mb-10">
+                  Paragraph
+                </h1>
+                <p className="text-xl text-black/50 mr-25 ">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus itaque, autem necessitatibus voluptate quod mollitia
+                  delectus aut, sunt placeat nam vero culpa sapiente consectetur
+                  similique, inventore eos fugit cupiditate numquam!
+                </p>
+              </ScrollFade>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default BlogSingle
+export default BlogSingle;

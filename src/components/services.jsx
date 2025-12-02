@@ -4,6 +4,7 @@ import { image, p, title } from "framer-motion/client";
 import { GrMoney } from "react-icons/gr";
 import { TbTriangleInvertedFilled } from "react-icons/tb";
 import { IoTriangleSharp } from "react-icons/io5";
+import ScrollFade from "./scrollFade";
 
 const Services = () => {
   const services = [
@@ -58,22 +59,24 @@ const Services = () => {
         />
       </div>
 
-      <div className="grid grid-cols-4 justify-center items-center space-x-10 pb-50">
-        {services.map((service, index) => (
-          <div key={index} className="text-center ">
-            <div className="relative w-40 h-35 bg-[#ffffff] ml-30 mt-30 justify-items-center-safe">
-              <GrMoney className=" text-blue-500 pt-2" size={100} />
-              <div className="absolute -bottom-8 text-white text-4xl">
-                <IoTriangleSharp size={70} className="rotate-180" />
+      <ScrollFade>
+        <div className="grid grid-cols-4 justify-center items-center space-x-10 pb-50">
+          {services.map((service, index) => (
+            <div key={index} className="text-center ">
+              <div className="relative w-40 h-35 bg-[#ffffff] ml-30 mt-30 justify-items-center-safe">
+                <GrMoney className=" text-blue-500 pt-2" size={100} />
+                <div className="absolute -bottom-8 text-white text-4xl">
+                  <IoTriangleSharp size={70} className="rotate-180" />
+                </div>
               </div>
+              <h1 className="text-3xl  font-semibold pt-10 text-black">
+                {service.title}
+              </h1>
+              <p className="text-2xl pt-5 text-black/40">{service.paragraph}</p>
             </div>
-            <h1 className="text-3xl  font-semibold pt-10 text-black">
-              {service.title}
-            </h1>
-            <p className="text-2xl pt-5 text-black/40">{service.paragraph}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </ScrollFade>
     </div>
   );
 };

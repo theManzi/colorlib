@@ -12,6 +12,7 @@ import Header from "./navigations/header";
 import ServicesPage from "./ServicesPage";
 import BlogSingle from "./components/blogsingle";
 import BlogPage from "./Blog";
+import DevicePreview from "./components/devicetype";
 
 
 
@@ -19,24 +20,22 @@ import BlogPage from "./Blog";
 function App() {
   return (
     <div className="  ">
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/single" element={<BlogSingle/>}/>
-          <Route path="/work" element={<Work />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/contact" element={<Contact />} />
-          
-          
-         
-        
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+        <BrowserRouter>
+      <DevicePreview>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/single" element={<BlogSingle />} />
+            <Route path="/work" element={<Work />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+          </DevicePreview>
+        </BrowserRouter>
       
     </div>
   );
