@@ -14,7 +14,7 @@ const DevicePreview = ({ children }) => {
   };
 
   return (
-    <div className="min-h-screen pb-4 bg-[#333333]">
+    <div className="min-h-screen pb-4">
       <div className="flex items-center bg-[#333333]">
         <div className="flex cursor-pointer p-4">
           <h1 className="text-5xl font-semibold text-white">Colorlib</h1>
@@ -62,7 +62,7 @@ const DevicePreview = ({ children }) => {
 
       {/* Preview Container */}
       <div
-        className="mx-auto bg-white shadow-xl border rounded-xl overflow-hidden "
+        className="mx-aut shadow-xl border rounded-xl overflow-hidden "
         style={{
           width: sizes[device],
           transition: "0.3s ease",
