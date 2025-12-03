@@ -26,21 +26,21 @@ const Header = () => {
 
   return (
     <div className="justify-items-center w-screen  bg-white justify-center items-center">
-      <div className="flex space-x-20 bg-[#052f48] w-screen text-white/50 items-center justify-center ">
-        <h2 className="flex items-center">
-          <FaPhone className="text-blue-700 rotate-90 ml-20" />
+      <div className="lg:flex lg:space-x-20 md:flex md:space-x-10 bg-[#052f48] w-screen text-white/50 items-center justify-center ">
+        <h2 className="lg:flex md:flex items-center">
+          <FaPhone className="text-blue-700 rotate-90 lg:ml-20 md:ml-10" />
           Call Us:+250 790194517
         </h2>
-        <h2 className="flex ml-15 items-center">
-          <FaRegMap className="text-blue-700 text-xl m-1" /> Location: San
+        <h2 className="lg:flex lg:ml-15 md:flex md:ml-7 items-center">
+          <FaRegMap className="text-blue-700 lg:text-xl lg:m-1 md:text-xl md:m-1" /> Location: San
           Francisco, California,
            USA
         </h2>
-        <div className="flex gap-1 ml-95">
+        <div className="lg:flex md:flex lg:gap-1 md:gap-1 lg:ml-95 md:ml-50">
           {icons.map((icons, index) => (
             <div
               key={index}
-              className="text-white h-12 w-12 bg-blue-500 mt-1 justify-items-center"
+              className="text-white lg:h-12 lg:w-12 bg-blue-500 lg:mt-1 justify-items-center"
             >
               {icons.icon}
             </div>

@@ -61,14 +61,16 @@ const DevicePreview = ({ children }) => {
       </div>
 
       {/* Preview Container */}
-      <div
-        className="mx-aut shadow-xl border rounded-xl overflow-hidden "
-        style={{
-          width: sizes[device],
-          transition: "0.3s ease",
-        }}
-      >
-        {children}
+      <div className="min-h-screen pb-4 flex flex-col items-center">
+        <div
+          className="mx-auto shadow-xl border items-center justify-center overflow-hidden "
+          style={{
+            width: sizes[device],
+            transition: "0.3s ease",
+          }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );

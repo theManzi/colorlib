@@ -12,9 +12,9 @@ import ScrollFade from './components/scrollFade';
 const Home = () => {
   return (
     <div>
-      <ScrollFade>
+      
         <Content />
-      </ScrollFade>
+   
       <ScrollFade>
         <About />
       </ScrollFade>
